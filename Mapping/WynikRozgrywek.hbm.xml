@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="kolokwium.Models" assembly="kolokwium"
+xmlns="urn:nhibernate-mapping-2.2">
+	<class name="WynikiRozgrywek" table="WynikiRozgrywek">
+		<id name="Id" column="Id" type="Int32">
+			<generator class="native" />
+		</id>
+		<property name="Wynik" type="String" column="Wynik" length="100" />
+
+		<many-to-one name="Druzyna1" class="kolokwium.Models.Druzyna" column ="Id" fetch="select" cascade="none"></many-to-one>
+		<many-to-one name="Druzyna2" class="kolokwium.Models.Druzyna" column ="Id" fetch="select" cascade="none"></many-to-one>
+		<many-to-one name="TypRozgrywek" class="kolokwium.Models.TypRozgrywek" column ="Id" fetch="select" cascade="none"></many-to-one>
+	</class>
+</hibernate-mapping>

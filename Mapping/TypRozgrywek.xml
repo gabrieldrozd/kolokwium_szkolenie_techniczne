@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="kolokwium.Models" assembly="kolokwium"
+xmlns="urn:nhibernate-mapping-2.2">
+	<class name="TypRozgrywek" table="TypRozgrywek">
+		<id name="Id" column="Id" type="Int32">
+			<generator class="native" />
+		</id>
+		<property name="Nazwa" type="String" column="Nazwa" length="100" />
+	</class>
+</hibernate-mapping>
